@@ -1,0 +1,232 @@
+{
+  "routes": [
+    {
+      "route": "/api/v1/user",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController",
+      "secured": true,
+      "adminRoute":true,
+      "action":"createUser"
+    },
+    {
+      "route": "/api/v1/check",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController",
+      "secured": false,
+      "adminRoute":true,
+      "action":"check"
+    },
+    
+    {
+      "route": "/api/v1/forgotpassword",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController",
+      "secured": false,
+      "adminRoute":true,
+      "action":"reset"
+    },
+    {
+      "route": "/api/v1/password",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController",
+      "secured": false,
+      "adminRoute":true,
+      "action":"forgotPassword"
+    },
+    {
+      "route": "/api/v1/reset",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController",
+      "secured": false,
+      "adminRoute":true,
+      "action":"checkPassword"
+    },
+    {
+      "route": "/api/v1/logout",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController",
+      "secured": false,
+      "adminRoute":true,
+      "action":"logout"
+    },
+    {
+      "route": "/api/v1/admin",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController",
+      "secured": false,
+      "adminRoute":true,
+      "action":"createAdmin"
+    },
+    {
+      "route": "/api/v1/user/:userId",
+      "method": "DELETE",
+      "controller": "../components/user/controller/UserController",
+      "secured": true,
+      "adminRoute":true,
+      "action":"deleteUser"
+    },
+    {
+      "route": "/api/v1/user",
+      "method": "GET",
+      "controller": "../components/user/controller/UserController",
+      "secured": true,
+      "adminRoute":true,
+      "action":"getAllUser"
+    },
+    {
+      "route": "/api/v1/user/login",
+      "method": "POST",
+      "controller": "../components/user/controller/UserController",
+      "secured": false,
+      "adminRoute":false,
+      "action":"login"
+    },
+    {
+      "route": "/api/v1/user/:userId",
+      "method": "GET",
+      "controller": "../components/user/controller/UserController",
+      "secured":true,
+      "adminRoute":true,
+      "action":"getUser"
+    },
+    {
+      "route": "/api/v1/user/:userId",
+      "method": "PUT",
+      "controller": "../components/user/controller/UserController",
+      "secured":true,
+      "adminRoute":true,
+      "action":"updateUser"
+    },
+    {
+      "route": "/api/v1/bank",
+      "method": "POST",
+      "controller": "../components/bank/controller/BankController",
+      "secured": true,
+      "adminRoute":true,
+      "action":"createBank"
+    },
+    {
+      "route": "/api/v1/bank",
+      "method": "GET",
+      "controller": "../components/bank/controller/BankController",
+      "secured": false,
+      "adminRoute":true,
+      "action":"getAllBank"
+    },
+    {
+      "route": "/api/v1/bank/:bankId",
+      "method": "GET",
+      "controller": "../components/bank/controller/BankController",
+      "secured": true,
+      "adminRoute":true,
+      "action":"getBank"
+    },
+    {
+      "route": "/api/v1/bank/:bankId",
+      "method": "DELETE",
+      "controller": "../components/bank/controller/BankController",
+      "secured": true,
+      "adminRoute":true,
+      "action":"deleteBank"
+    },
+    {
+      "route": "/api/v1/bank/:bankId",
+      "method": "PUT",
+      "controller": "../components/bank/controller/BankController",
+      "secured": true,
+      "adminRoute":true,
+      "action":"updateBank"
+    },
+    {
+      "route": "/api/v1/user/account",
+      "method": "POST",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"createAccount"
+    },
+ 
+    {
+      "route": "/api/v1/user/account/:accountNo",
+      "method": "GET",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"getAccount"
+    },
+    {
+      "route":  "/api/v1/user/account/delete/:accountId",
+      "method": "DELETE",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"deleteAccount"
+    },
+    {
+      "route":  "/api/v1/user/:userId/getAllAccounts",
+      "method": "GET",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"getAllAccounts"
+    },
+    {
+      "route": "/api/v1/user/:userId/account/:accountNumber/withdraw",
+      "method": "POST",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"withDrawAmount"
+    },
+    {
+      "route": "/api/v1/user/:userId/account/:accountNumber/deposit",
+      "method": "POST",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"depositAmount"
+    },
+    {
+      "route": "/api/v1/user/:userId/account/:senderAccountNo/transfer",
+      "method": "POST",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"transferAmount"
+    },
+    {
+      "route": "/api/v1/user/account/:accountNo/passbook",
+      "method": "GET",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"printPassBook"
+    },
+  
+    {
+      "route": "/api/v1/user/account/:userId/networth",
+      "method": "GET",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":false,
+      "action":"getUserNetWorth"
+    },
+    {
+      "route": "/api/v1/bank/:bankId/networth",
+      "method": "GET",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": true,
+      "adminRoute":true,
+      "action":"getBankNetWorth"
+    },
+    {
+      "route": "/api/v1/user/logout",
+      "method": "POST",
+      "controller": "../components/accounts/controller/AccountController",
+      "secured": false,
+      "adminRoute":false,
+      "action":"logout"
+    }
+  ]
+}
+

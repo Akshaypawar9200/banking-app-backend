@@ -1,0 +1,17 @@
+{
+  "clientGetPermission": "read:client",
+  "clientPostPermission": ["read:client", "write:client"],
+  "projectGerPermission": "read:project",
+  "projectPostPermission": ["read:project", "write:project"],
+  "projectSpecGetPermission": "read:projectSpec",
+  "projectSpecPostPermission": ["read:projectSpec", "write:projectSpec"],
+  "projectSettingGetPermission": "read:projectSetting",
+  "projectSettingPostPermission": [
+    "read:projectSetting",
+    "write:projectSetting"
+  ],
+  "accountGetPermission": "read:account",
+  "accountPostPermission": ["read:account", "write:account"],
+  "contactGetPermission": "read:contact",
+  "contactPostPermission": ["read:contact", "write:contact"]
+}
